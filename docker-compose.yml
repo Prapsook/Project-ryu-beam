@@ -13,7 +13,7 @@ services:
     ports:
       - "3000:3000"
   frontend:
-    image: frontend-ryu-beam
+    image: frontend-ryu-beam:latest
     restart: unless-stopped
     ports:
       - "8080:8080"
