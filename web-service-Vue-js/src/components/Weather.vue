@@ -151,7 +151,7 @@
   
       async getDataBulk() {
         try {
-          const response = await axios.get("/178.128.30.60:3000/weather_data");
+          const response = await axios.get("http://178.128.30.60:3000/weather_data");
           const getBulk = response.data;
           const tableBody = document.querySelector("#weatherTable tbody");
           getBulk.forEach((item) => {
