@@ -1,0 +1,21 @@
+version: "3"
+services:
+  # mdb:
+  #   image: mongo
+  #   # ports:
+  #   #   - "27017:27017"
+  #   container_name: mdb
+  #   volumes:
+  #     - ./db/:/data/db
+  backend:
+    image: backend-ryu-beam
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+  frontend:
+    image: frontend-ryu-beam
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "backend"
