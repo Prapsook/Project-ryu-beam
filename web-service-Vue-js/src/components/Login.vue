@@ -26,7 +26,7 @@ export default  {
         data() {
             return {
                 name: 'Login.js',
-                BACKEND_URL : `http://localhost:8080`
+                // BACKEND_URL : `http://localhost:8080`
             }
         },
         methods: {
@@ -44,7 +44,7 @@ export default  {
 
                     console.log("form",form);
 
-                      const responseData = await axios.post("http://localhost:3000/login",form);
+                      const responseData = await axios.post("http://178.128.30.60:3000/login",form);
                       const getBulk =  responseData.data;
                       console.log("getBulk",getBulk);
 
